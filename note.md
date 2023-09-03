@@ -20,3 +20,13 @@
 3. Boolean 'true' can be written with just the property name. 'False' should be written with curly braces.
 4. The 'class' attribute is writen as className.
 5. In-line syles are provided as objects.
+
+## Module System Overview
+
+- Import/Export system allow modules to share variables
+  Basic Rules
+
+1. Export statements make variables to other file
+
+- default export: only one export per file. Default exports can be renamed in the importing file. Example `export default App`
+- named export:
