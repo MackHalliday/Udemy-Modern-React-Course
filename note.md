@@ -32,3 +32,5 @@
 - named export: use when exporting multiple variables, can have as maany named export as we want. Example with export and import `export const message = 'hi'` / `import {message} from './App`.
 
 2. No `./` means imported from library. Example `import React from react`
+
+3. `../` denotes how far 'unnested' the file is
