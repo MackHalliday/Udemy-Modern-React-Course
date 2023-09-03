@@ -36,3 +36,18 @@
 3. `../` denotes how far 'unnested' the file is
 
 [JSX Cheatsheet for Section 2](https://jsx-notes.vercel.app/#Returning%20JSX)
+
+# Building with Reusable Components
+
+## Prop System
+
+1. Pass data from parent component to child component
+2. Allows a parent to configure each child differently
+3. ONE WAY FLOW
+
+## Destructing
+
+Example `const {title, handle} = props; ` OR `ProfileCard({title, handle})`
+
+- Create variables for all props values
+- Good since you do not always need all values from props
