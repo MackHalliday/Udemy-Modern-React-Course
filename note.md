@@ -47,7 +47,7 @@
 
 ## Destructing
 
-Example `const {title, handle} = props; ` OR `ProfileCard({title, handle})`
+Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, handle})`
 
 - Create variables for all props values
 - Good since you do not always need all values from props
