@@ -4,12 +4,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 // knows how to get a component to show in the browser, specifically for web dev
 
+// 2. Import a component
 import App from "./App";
 
-// 2. Get a reference to the div with ID root
+// 3. Get a reference to the div with ID root
 const el = document.getElementById("root");
 
-// 3. Tell React to take controls of that element
+// 4. Tell React to take controls of that element
 const root = ReactDOM.createRoot(el);
 
 // 5. Show the component on the screen
