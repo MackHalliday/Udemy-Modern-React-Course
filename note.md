@@ -51,3 +51,9 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 
 - Create variables for all props values
 - Good since you do not always need all values from props
+
+## Adding Images
+
+- If image is less than 9.7 kb, served as base64 encoded
+- If image is greater than 9.7 kb served as seperate file
+- Add attribute `alt="name of image"` to get rid of error for screen reader
