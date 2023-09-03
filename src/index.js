@@ -1,17 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// 1. Import the React and ReactDom library
+import React from "react";
+// understands what a component is and how multiple components work together
+import ReactDOM from "react-dom/client";
+// knows how to get a component to show in the browser, specifically for web dev
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// 2. Get a reference to the div with ID root
+const el = document.getElementById("root");
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// 3. Tell React to take controls of that element
+const root = ReactDOM.createRoot(el);
+
+// 4. Create a component
+function App() {
+  const inputType = "number";
+  const minValue = 5;
+  const maxValue = 10;
+  return (
+    <input
+      style={{ border: "3px solid red" }}
+      type={inputType}
+      min={minValue}
+      max={maxValue}
+      autoFocus={true}
+    />
+  );
+}
+// 5. Show the component on the screen
+root.render(<App />);
