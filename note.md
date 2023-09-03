@@ -34,3 +34,5 @@
 2. No `./` means imported from library. Example `import React from react`
 
 3. `../` denotes how far 'unnested' the file is
+
+[JSX Cheatsheet for Section 2](https://jsx-notes.vercel.app/#Returning%20JSX)
