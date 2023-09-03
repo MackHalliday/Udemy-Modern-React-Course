@@ -29,4 +29,6 @@
 1. Export statements make variables to other file
 
 - default export: only one export per file. Default exports can be renamed in the importing file. Example `export default App`
-- named export:
+- named export: use when exporting multiple variables, can have as maany named export as we want. Example with export and import `export const message = 'hi'` / `import {message} from './App`.
+
+2. No `./` means imported from library. Example `import React from react`
