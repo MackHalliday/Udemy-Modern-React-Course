@@ -1,16 +1,13 @@
-// 4. Create a component
+import ProfileCard from "./ProfileCard";
+
 function App() {
-  const inputType = "number";
-  const minValue = 5;
-  const maxValue = 10;
   return (
-    <input
-      style={{ border: "3px solid red" }}
-      type={inputType}
-      min={minValue}
-      max={maxValue}
-      autoFocus={true}
-    />
+    <div>
+      <div> Personal Digital Assistants</div>
+      <ProfileCard title="Alexa" handle="@alexa99" />
+      <ProfileCard title="Cortana" handle="@cortana32" />
+      <ProfileCard title="Sira" handle="@siri01" />
+    </div>
   );
 }
 
