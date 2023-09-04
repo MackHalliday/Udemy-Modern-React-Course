@@ -64,6 +64,9 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 
 ## Using events steps
 
+- "I'd like to run some code when a user does something"
+- Events can be listened for by adding prop to component, like ` <button onClick={handleClick}/>`
+
 1. Decide what event you'd like to watch for
 2. Create a function, called usually a handler or a callback. Function called by another piece of code
 3. Name the function using pattern of handle + EventName. Example `handleClick`, `handleScroll`, `handleMouseUp`, `onClick`, `handleButtonClick`
@@ -74,6 +77,7 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 
 ## What is State?
 
+- "I'd like to change something on the screen"
 - Data that change as the user interacts with out app
 - When this data changes, React will update content on the screen
 - This is the one-and-only way we change content
