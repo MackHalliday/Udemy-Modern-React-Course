@@ -92,3 +92,20 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 ## What is an Array Destructuring?
 
 - useState returns a variable and method to change variable (setting function)
+
+# Using an API with React
+
+## Data Flow
+
+- 'Sibling' components cannot directly communicate with one another
+- Share info between sibling thru parent component
+- Use prop system to communicate info from parent to child
+- Child to parent communication
+  - can use props thru event handlers
+  - Example user searches term from a SearchBar component, event handler onSubmit defined in parent App component excutes the event
+
+## Forms
+
+- Forms have built in event handlers that 'listen' for Enter/Submit Event
+- Collects all elements on the form and creates a string. Example a Form that collects email and password will create the string `myapp.come?email=test@email.com&password=password123` and submit a network event
+- To prevent network event, pass `event` into event handler and include the code `event.preventDefault();`
