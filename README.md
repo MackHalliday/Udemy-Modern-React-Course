@@ -71,3 +71,16 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
    `button onClick={handleClick} />`
 5. Make sure you pass using valid event name to child
 6. Make sure pass event in as reference. Example `handleClick` NOT `handleClick()`
+
+## State
+
+- Data that change as the user interacts with out app
+- When this data changes, React will update content on the screen
+- This is the one-and-only way we change content
+
+## Using state in app
+
+1. Assign state a top of component function with useState function
+2. Give a value to the useState function. This is the DEFAULT value.
+3. Use the state in some way in our component. Use setter function.
+4. When user does something, update the piece of state. Causes "rerender".
