@@ -1,3 +1,5 @@
+# Notes for Modern React Course
+
 # What is React?
 
 - Display HTML for users and changes HTML as user does something
@@ -11,9 +13,9 @@
 - App makes second request to Server and gets bundle.js file. bundle.js references 'root' div.
 - React takes control of 'root' div.
 
-# Creating Content with JSX
+# Creating content with JSX
 
-## Rules for Converting HTML to JSX
+## Rules for converting HTML to JSX
 
 1. All prop names follow camelCase
 2. Number attributes use curly braces
@@ -21,7 +23,7 @@
 4. The 'class' attribute is writen as className.
 5. In-line syles are provided as objects.
 
-## Module System Overview
+## Module system overview
 
 - Import/Export system allow modules to share variables
   Basic Rules
@@ -37,9 +39,9 @@
 
 [JSX Cheatsheet for Section 2](https://jsx-notes.vercel.app/#Returning%20JSX)
 
-# Building with Reusable Components
+# Building with reusable components
 
-## Prop System
+## Prop system
 
 1. Pass data from parent component to child component
 2. Allows a parent to configure each child differently
@@ -57,3 +59,15 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 - If image is less than 9.7 kb, served as base64 encoded
 - If image is greater than 9.7 kb served as seperate file
 - Add attribute `alt="name of image"` to get rid of error for screen reader
+
+# State: How to change your app
+
+## Using events steps
+
+1. Decide what event you'd like to watch for
+2. Create a function, called usually a handler or a callback. Function called by another piece of code
+3. Name the function using pattern of handle + EventName. Example `handleClick`, `handleScroll`, `handleMouseUp`, `onClick`, `handleButtonClick`
+4. Pass function as a prop to a plain element. Example
+   `button onClick={handleClick} />`
+5. Make sure you pass using valid event name
+6. Make sure pass event in as reference. Example `handleClick` NOT `handleClick()`
