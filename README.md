@@ -120,4 +120,4 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 
 ### Example from Section 5 Part 72
 
-![Alt text](https://file%252B.vscode-resource.vscode-cdn.net/var/folders/r_/jwq06dw17150dq9g5xn4qhcw0000gp/T/TemporaryItems/NSIRD_screencaptureui_NB1xfr/Screenshot%25202023-09-04%2520at%25207.45.36%2520PM.png?version%253D1693871146615)
+![Alt text](./readme_pics/code_example_handle_input_elements.png)
