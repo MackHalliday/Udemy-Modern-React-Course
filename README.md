@@ -54,7 +54,7 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 - Create variables for all props values
 - Good since you do not always need all values from props
 
-## Adding Images
+## Adding images
 
 - If image is less than 9.7 kb, served as base64 encoded
 - If image is greater than 9.7 kb served as seperate file
@@ -72,7 +72,7 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 5. Make sure you pass using valid event name to child
 6. Make sure pass event in as reference. Example `handleClick` NOT `handleClick()`
 
-## State
+## What is State?
 
 - Data that change as the user interacts with out app
 - When this data changes, React will update content on the screen
@@ -84,3 +84,7 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 2. Give a value to the useState function. This is the DEFAULT value.
 3. Use the state in some way in our component. Use setter function.
 4. When user does something, update the piece of state. Causes "rerender".
+
+## What is an Array Destructuring?
+
+- useState returns a variable and method to change variable (setting function)
