@@ -69,5 +69,5 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 3. Name the function using pattern of handle + EventName. Example `handleClick`, `handleScroll`, `handleMouseUp`, `onClick`, `handleButtonClick`
 4. Pass function as a prop to a plain element. Example
    `button onClick={handleClick} />`
-5. Make sure you pass using valid event name
+5. Make sure you pass using valid event name to child
 6. Make sure pass event in as reference. Example `handleClick` NOT `handleClick()`
