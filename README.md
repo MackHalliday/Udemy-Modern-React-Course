@@ -109,3 +109,15 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 - Forms have built in event handlers that 'listen' for Enter/Submit Event
 - Collects all elements on the form and creates a string. Example a Form that collects email and password will create the string `myapp.come?email=test@email.com&password=password123` and submit a network event
 - To prevent network event, pass `event` into event handler and include the code `event.preventDefault();`
+
+# Handle Text Input
+
+1. Create a new piece of state
+2. Create event handler to watch for the onChange event
+3. When the onChange event fires, get the value from the input
+4. Take that value from the input and use it to update your state
+5. Pass your state to the input as the value prop
+
+### Example from Section 5 Part 72
+
+![Alt text](https://file%252B.vscode-resource.vscode-cdn.net/var/folders/r_/jwq06dw17150dq9g5xn4qhcw0000gp/T/TemporaryItems/NSIRD_screencaptureui_NB1xfr/Screenshot%25202023-09-04%2520at%25207.45.36%2520PM.png?version%253D1693871146615)
