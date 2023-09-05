@@ -161,19 +161,57 @@ export default SearchBar;
 ```
 import SearchBar from "./components/SearchBar";
 import searchImages from "./api.js";
+import ImageList from "./components/ImageList";
+import { useState } from "react";
 
 function App() {
+  const [images, setImages] = useState([]);
+
+  // SEE ASYNC AND AWAIT HERE!
   const handleSearch = async (term) => {
     const result = await searchImages(term);
-    console.log(result);
+    setImages(result);
   };
 
   return (
     <div>
       <SearchBar onSubmit={handleSearch} />
+      <ImageList images={images} />
     </div>
   );
 }
 
 export default App;
+
 ```
+
+## Requirements for Keys
+
+1. Use whenever we have a list of elements (everytime using map)
+2. Add the key to the top-most JSX element in the list. In example below `key={image.id}` in on the `<div>` not the `<ImageShow />`
+3. Must be a string or number
+4. Should be unique for this list
+5. Should be consistent across renders
+
+Example
+
+```
+import ImageShow from "./ImageShow";
+
+function ImageList({ images }) {
+  const renderImages = images.map((image) => {
+    return (
+      <div key={image.id}>
+        <ImageShow image={image} />
+      </div>
+    );
+  });
+  return <div> {renderImages} </div>;
+}
+
+export default ImageList;
+```
+
+- Usually use database index for ID
+- ID given by API response
+- Can use index from `.map` - NOT IDEAL
