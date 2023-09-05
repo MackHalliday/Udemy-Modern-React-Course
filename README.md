@@ -118,6 +118,40 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 4. Take that value from the input and use it to update your state
 5. Pass your state to the input as the value prop
 
-### Example from Section 5 Part 72
+### Example
 
-![Alt text](./readme_pics/code_example_handle_input_elements.png)
+```
+import React from 'react';
+import {useState}' from 'react';
+
+function App() {
+
+    const [input, setInput] = useState('');
+
+    const handleChange = (event) => {
+        setInput(event.target.value)
+    }
+
+    return (
+        <div>
+          <div>
+            Enter some text
+          </div>
+          <input value={input} onChange={handleChange}/>
+          <h3>Your Text</h3>
+          <p>
+            {input}
+          </p>
+        </div>
+    );
+}
+
+const useState = React.useState;
+export default App;
+```
+
+### Why?
+
+1. Allows React to interact with input
+2. Allows error messages
+3. Allows validation
