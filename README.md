@@ -121,33 +121,30 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 ### Example
 
 ```
-import React from 'react';
-import {useState}' from 'react';
+import { useState } from "react";
 
-function App() {
+function SearchBar({ onSubmit }) {
+  const [term, setTerm] = useState("default text!");
 
-    const [input, setInput] = useState('');
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    onSubmit(term);
+  };
 
-    const handleChange = (event) => {
-        setInput(event.target.value)
-    }
+  const handleChange = (event) => {
+    setTerm(event.target.value);
+  };
 
-    return (
-        <div>
-          <div>
-            Enter some text
-          </div>
-          <input value={input} onChange={handleChange}/>
-          <h3>Your Text</h3>
-          <p>
-            {input}
-          </p>
-        </div>
-    );
+  return (
+    <div>
+      <form onSubmit={handleFormSubmit}>
+        <input value={term} onChange={handleChange} />
+      </form>
+    </div>
+  );
 }
 
-const useState = React.useState;
-export default App;
+export default SearchBar;
 ```
 
 ### Why?
