@@ -156,7 +156,8 @@ export default SearchBar;
 ## Async and Await on API
 
 - Need to use async and await to tell React to wait until API call completed
-- Example below
+
+### Example below
 
 ```
 import SearchBar from "./components/SearchBar";
@@ -193,7 +194,13 @@ export default App;
 4. Should be unique for this list
 5. Should be consistent across renders
 
-Example
+### What to use as keys
+
+- Usually use database index for ID
+- ID given by API response
+- Can use index from `.map` - NOT IDEAL
+
+### Example
 
 ```
 import ImageShow from "./ImageShow";
@@ -211,7 +218,3 @@ function ImageList({ images }) {
 
 export default ImageList;
 ```
-
-- Usually use database index for ID
-- ID given by API response
-- Can use index from `.map` - NOT IDEAL
