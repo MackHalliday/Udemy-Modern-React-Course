@@ -152,3 +152,28 @@ export default SearchBar;
 1. Allows React to interact with input
 2. Allows error messages
 3. Allows validation
+
+## Async and Await on API
+
+- Need to use async and await to tell React to wait until API call completed
+- Example below
+
+```
+import SearchBar from "./components/SearchBar";
+import searchImages from "./api.js";
+
+function App() {
+  const handleSearch = async (term) => {
+    const result = await searchImages(term);
+    console.log(result);
+  };
+
+  return (
+    <div>
+      <SearchBar onSubmit={handleSearch} />
+    </div>
+  );
+}
+
+export default App;
+```
