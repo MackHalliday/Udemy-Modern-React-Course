@@ -1,5 +1,8 @@
 # Notes for Modern React Course
 
+[Modern React with Redux Course](https://www.udemy.com/course/react-redux/)
+![Image of Progress of course](./readme_pics/progress_on_course.png)
+
 # What is React?
 
 - Display HTML for users and changes HTML as user does something
