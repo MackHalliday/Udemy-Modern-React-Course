@@ -13,9 +13,9 @@
 - App makes second request to Server and gets bundle.js file. bundle.js references 'root' div.
 - React takes control of 'root' div.
 
-# Creating content with JSX
+# Creating Content with JSX
 
-## Rules for converting HTML to JSX
+## Rules for Converting HTML to JSX
 
 1. All prop names follow camelCase
 2. Number attributes use curly braces
@@ -23,7 +23,7 @@
 4. The 'class' attribute is writen as className.
 5. In-line syles are provided as objects.
 
-## Module system overview
+## Module System Overview
 
 - Import/Export system allow modules to share variables
   Basic Rules
@@ -39,9 +39,9 @@
 
 [JSX Cheatsheet for Section 2](https://jsx-notes.vercel.app/#Returning%20JSX)
 
-# Building with reusable components
+# Building with Reusable Components
 
-## Prop system
+## Prop System
 
 1. Pass data from parent component to child component
 2. Allows a parent to configure each child differently
@@ -54,7 +54,7 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 - Create variables for all props values
 - Good since you do not always need all values from props
 
-## Adding images
+## Adding Images
 
 - If image is less than 9.7 kb, served as base64 encoded
 - If image is greater than 9.7 kb served as seperate file
@@ -62,7 +62,7 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 
 # State: How to change your app
 
-## Using events steps
+## Using Events Steps
 
 - "I'd like to run some code when a user does something"
 - Events can be listened for by adding prop to component, like ` <button onClick={handleClick}/>`
@@ -82,7 +82,7 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 - When this data changes, React will update content on the screen
 - This is the one-and-only way we change content
 
-## Using state in app
+## Using State in App
 
 1. Assign state a top of component function with useState function
 2. Give a value to the useState function. This is the DEFAULT value.
@@ -110,7 +110,7 @@ Example `const {title, handle} = props; ` OR more likely `ProfileCard({title, ha
 - Collects all elements on the form and creates a string. Example a Form that collects email and password will create the string `myapp.come?email=test@email.com&password=password123` and submit a network event
 - To prevent network event, pass `event` into event handler and include the code `event.preventDefault();`
 
-# Handle Text Input
+## Handle Text Input
 
 1. Create a new piece of state
 2. Create event handler to watch for the onChange event
