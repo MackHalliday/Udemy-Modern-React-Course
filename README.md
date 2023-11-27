@@ -218,3 +218,107 @@ function ImageList({ images }) {
 
 export default ImageList;
 ```
+
+# How to Handle Forms
+
+## State Location
+
+- Find the lowest common parent of components that share state
+
+### Example
+
+- An App that allows to create and list books
+- State would be stored in the parent component of BookCreate and BookList
+
+## Basic Form Example
+
+- Form that can create a Book with a title on submit
+- Note functions for handleSubmit and setTitle
+- **Use `event.preventDefault()` to stop form from submitting when user types in input box**
+
+```
+import { useState } from "react";
+
+function BookCreate({ onCreate }) {
+  const [title, setTitle] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onCreate(title);
+    setTitle("");
+  };
+
+  return (
+    <div className="book-create">
+      <h3>Add a book</h3>
+      <form onSubmit={handleSubmit}>
+        <label>Title</label>
+        <input
+          className="input"
+          type="text"
+          placeholder="Enter title of book"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+        />
+        <button className="buttom" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+}
+
+export default BookCreate;
+```
+
+## Modifying State for Arrays
+
+- React ONLY re-renders if state different from current value
+
+### Bad code for modifying state
+
+"Current" value does not differ from "new" value
+- BAD! Push modifies an array (**See example below**)
+- BAD! Modifying an element
+- BAD! Nodifying a property
+  
+**BAD**
+```
+function App() {
+  const [books, setBooks] = useState([]);
+
+  const createBook = (title) => {
+      books.push(title)
+      console.log("books", books);
+      setBooks(books)
+    };
+  ...
+}
+```
+
+### Good code for modifying state
+- OK! Creating "new" array to update state (**See example below**)
+- ALSO OK! Mutating object but it isn't being used as state
+- ALSO OK! Mutating array but it isn't being used as state
+
+**GOOD**
+```
+function App() {
+  const [books, setBooks] = useState([]);
+
+  const createBook = (title) => {
+    setBooks([...books, title]);
+    console.log("books", books);
+  };
+  ...
+}
+```
+
+### [See Cheat Sheet for Updating State Here](https://state-updates.vercel.app/)
+
+### Insert or remove item from array
+- Have to create new array to update state
+- Use `.slice` with index to add item in middle of array
+- Use `.filter` - filter for desired value or filter out value if using `!==`
+  - `colors.filter((color, index) => {return color == "green"});` -> Return all green
+  - `colors.filter((color, index) => {return index !== 1});` -> Return all NOT index of 1
