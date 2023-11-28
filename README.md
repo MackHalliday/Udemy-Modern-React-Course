@@ -320,7 +320,7 @@ function App() {
 
 ### [See Cheat Sheet for Updating State Here](https://state-updates.vercel.app/)
 
-### Adding item at specific index
+### Adding item at specific index in array
 
 ```
 const addBook = (newTitle, index) => {
@@ -332,6 +332,24 @@ const addBook = (newTitle, index) => {
   };
 ```
 
+### Update specific item by id in array
+
+```
+ const updateBookById = (id, title) => {
+      // make new book array
+    const updatedBooks = books.map((book) => {
+        if (book.id === id) {
+            // create new obj if correct id
+            return { ...book, title: title}
+        };
+        return book
+    });
+    // set new book array to books state
+    setBooks(updatedBooks)
+  };
+
+```
+
 ### Insert or remove item from array
 
 - Have to create new array to update state
@@ -339,3 +357,17 @@ const addBook = (newTitle, index) => {
 - Use `.filter` - filter for desired value or filter out value if using `!==`
   - `colors.filter((color, index) => {return color == "green"});` -> Return all green
   - `colors.filter((color, index) => {return index !== 1});` -> Return all NOT index of 1
+
+## Modifying state for object
+
+### Adding or changing property to object
+
+- Add the property `color` to `Fruit` object
+- Use ...[object_name], then the property to be add/updated
+  `const updateFruit = { ...fruit, color: color};`
+
+### Remove property from object
+
+- Remove the property `color` from `Fruit` object
+- Use `...rest`
+  `const removeColor = () => const { color, ...rest } = fruit;`
