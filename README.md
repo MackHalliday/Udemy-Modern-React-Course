@@ -278,11 +278,13 @@ export default BookCreate;
 ### Bad code for modifying state
 
 "Current" value does not differ from "new" value
+
 - BAD! Push modifies an array (**See example below**)
 - BAD! Modifying an element
 - BAD! Nodifying a property
-  
+
 **BAD**
+
 ```
 function App() {
   const [books, setBooks] = useState([]);
@@ -297,11 +299,13 @@ function App() {
 ```
 
 ### Good code for modifying state
+
 - OK! Creating "new" array to update state (**See example below**)
 - ALSO OK! Mutating object but it isn't being used as state
 - ALSO OK! Mutating array but it isn't being used as state
 
 **GOOD**
+
 ```
 function App() {
   const [books, setBooks] = useState([]);
@@ -316,7 +320,20 @@ function App() {
 
 ### [See Cheat Sheet for Updating State Here](https://state-updates.vercel.app/)
 
+### Adding item at specific index
+
+```
+const addBook = (newTitle, index) => {
+    setBooks([
+      ...books.slice(0, index),
+      { title: newTitle, index: index },
+      ...books.slice(index),
+    ]);
+  };
+```
+
 ### Insert or remove item from array
+
 - Have to create new array to update state
 - Use `.slice` with index to add item in middle of array
 - Use `.filter` - filter for desired value or filter out value if using `!==`
