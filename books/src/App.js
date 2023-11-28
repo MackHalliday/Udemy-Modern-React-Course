@@ -24,7 +24,6 @@ function App() {
   return (
     <div>
       <div>
-        {" "}
         <BookList books={books} editBook={updateBookById} />
       </div>
       <div>
